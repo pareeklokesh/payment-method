@@ -212,6 +212,7 @@
 	$(".amount-option-all").click(function(){
 		var val = $(this).text();
 		$("#addAmount").val(val);
+		$(this).parent().toggleClass("select-amount-active").siblings().removeClass("select-amount-active");
 	});
 </script>
 <script>

@@ -111,7 +111,6 @@ img {
   margin-top: 15px;
 }
 .payment-option a, .select-amount a {
-	transition: all .4s linear;
 	position: relative;
 	text-decoration: none;
 	overflow: hidden;
@@ -130,7 +129,6 @@ img {
     background: #ffde1a;
     transform: rotate(-38deg);
     right: -22px;
-    transition: all .4s linear;
 
 }
 .payment-option .select-payment-active a::before {
@@ -141,7 +139,6 @@ img {
     bottom: -1px;
 right: 2px;
 z-index: 9;
-transition: all .4s linear;
 }
 .payment-option .select-payment-active a::after {
 	width: 56px;
@@ -346,6 +343,10 @@ transition: all .4s linear;
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.select-amount-active a {
+	background: #ffde1a;
+color: #333333;
 }
 
 
