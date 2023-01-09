@@ -116,7 +116,7 @@
 		</div>
 
 		<div class="funds-footer">
-			<button id="paymentfunds">Submit</button>
+			<button id="paymentfunds" disabled>Submit</button>
 		</div>
 
 		</div>
@@ -137,7 +137,7 @@
 		<div class="w-100 amount-form">
 
 		<div class="w-100 amount-form-logo">
-			<a href="#" class="logo">
+			<a href="#" id="selectpayment-logo" class="logo">
 				<img src="assets/img/nagad.png">
 			</a>
 		</div>
@@ -151,7 +151,7 @@
 					<label>Amount:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" readonly value="500.00" name="">
+					<input type="text" readonly id="selectamount" value="500.00" name="">
 					<img src="assets/img/readonly-icon.png" class="readonly-icon" />
 				</div>
 			</div>
@@ -206,17 +206,25 @@
 
 <script>
 	$(".select-payment").click(function(){
+		
 		$(this).parent().toggleClass("select-payment-active").siblings().removeClass("select-payment-active");
-		var selectval = $(this).text();
-		$("#paymentfundsBtn .selectval").text(selectval);
+		var selectval = $(this).html();
+		//var paymentlogo = (this).html();
+		$("#paymentfundsBtn .selectval").html(selectval);
+		$("#selectpayment-logo").html(selectval);
 	});
 </script>
 
 <script>
+	$(document).ready(function(){
+		$('#paymentfunds').prop('disabled', true);
+	});
 	$(".amount-option-all").click(function(){
 		var val = $(this).text();
 		$("#addAmount").val(val);
+		$("#selectamount").val(val);
 		$(this).parent().toggleClass("select-amount-active").siblings().removeClass("select-amount-active");
+		$('#paymentfunds').prop('disabled', false);
 	});
 </script>
 <script>

@@ -362,6 +362,19 @@ color: #333333;
 .form-control input.nagad-agent:read-only {
 	color: #ca3376;
 }
+#paymentfundsBtn .selectval img {
+  display: none;
+}
+#selectpayment-logo {
+  font-size: 0;
+}
+#paymentfunds:disabled {
+  opacity: 0.8;
+  cursor: auto;
+}
+#paymentfunds {
+	cursor: pointer;
+}
 
 
 
