@@ -116,7 +116,7 @@ img {
 	text-decoration: none;
 	overflow: hidden;
 }
-.payment-option a:hover, .payment-option a.select-payment-active, .select-amount a:hover {
+.payment-option a:hover, .payment-option .select-payment-active a, .select-amount a:hover {
 	border-color: #ffde1a;
 }
 .payment-option a::after {
@@ -133,7 +133,7 @@ img {
     transition: all .4s linear;
 
 }
-.payment-option a.select-payment-active::before {
+.payment-option .select-payment-active a::before {
 	content: "✔";
 	position: absolute;
     color: #333;
@@ -143,7 +143,7 @@ right: 2px;
 z-index: 9;
 transition: all .4s linear;
 }
-.payment-option a.select-payment-active::after {
+.payment-option .select-payment-active a::after {
 	width: 56px;
 }
 .amount {
@@ -226,19 +226,15 @@ transition: all .4s linear;
   border-radius: 5px;
   padding: 15px 10px;
   box-shadow: 0 0px 5px #ccc;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 .logo {
 	text-align: center;
-	width: 100%;
-	margin-bottom: 15px;
-	display: block;
 }
 .logo img {
 	text-align: center;
 	margin: 0px auto;
 	display: block;
-	width: 100px;
 }
 .content {
 	text-align: center;
@@ -294,6 +290,62 @@ transition: all .4s linear;
   background: #fff;
   padding: 1px 3px;
   left: 8px;
+}
+.payment-option a img {
+  display: block;
+  margin: 0px auto;
+}
+.payment-option a span {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+.payment-option a {
+  min-height: 83px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.payment-white-full-block {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.amount-form {
+	padding: 0 10px;
+}
+.payment-white-full-block .funds-block {
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 15px;
+}
+.back-to-fund {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.payment-amount .payment-full-block {
+  background: transparent;
+}
+.amount-form-logo {
+  margin-bottom: 15px;
+}
+.amount-form-logo .logo {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #14805e;
+}
+.amount-form-logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 
