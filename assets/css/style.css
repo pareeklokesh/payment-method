@@ -338,6 +338,7 @@ z-index: 9;
   justify-content: center;
   border-radius: 50%;
   border: 2px solid #14805e;
+  padding: 0 5px;
 }
 .amount-form-logo {
   text-align: center;
