@@ -151,8 +151,8 @@
 					<label>Amount:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" readonly id="selectamount" value="500.00" name="">
-					<img src="assets/img/readonly-icon.png" class="readonly-icon" />
+					<input type="text" readonly id="selectamount" class="copytext" value="500.00" name="selectamount">
+					<button type="button" class="copybtn" onclick="copyToClipboarddd()"><img src="assets/img/readonly-icon.png" class="readonly-icon" /></button>
 				</div>
 			</div>
 			<div class="form-group">
@@ -160,8 +160,8 @@
 					<label>NAGAD Agent:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" class="nagad-agent" value="0985423658" readonly name="">
-					<img src="assets/img/readonly-icon.png" class="readonly-icon" />
+					<input type="text" class="nagad-agent copytext" id="nagadagentinput" value="0985423658" readonly name="nagadagentinput">
+					<button type="button" onclick="copyToClipboard()" class="copybtn"><img src="assets/img/readonly-icon.png" class="readonly-icon" /></button>
 				</div>
 			</div>
 			<div class="form-group">
@@ -169,7 +169,7 @@
 					<label>Transfer from:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" name="">
+					<input type="text" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="">
 				</div>
 			</div>
 			<div class="form-group">
@@ -248,6 +248,23 @@
 		$("body").removeClass("payment-amount");
 	});
 </script>
+
+<script>
+function copyToClipboard() {
+    var textBox = document.getElementById("nagadagentinput");
+    textBox.select();
+    document.execCommand("copy");
+}
+</script>
+<script>
+function copyToClipboarddd() {
+    var textBox = document.getElementById("selectamount");
+    textBox.select();
+    document.execCommand("copy");
+}
+</script>
+
+
 
 </body>
 </html>

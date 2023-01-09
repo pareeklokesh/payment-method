@@ -355,10 +355,16 @@ color: #333333;
   color: #14805e;
 }
 .form-control .readonly-icon {
+  width: 25px;
+}
+.copybtn {
+  background: transparent;
+  border: 0;
   position: absolute;
   top: 7px;
-  width: 25px;
   right: 8px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .form-control input.nagad-agent:read-only {
 	color: #ca3376;
