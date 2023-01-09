@@ -348,6 +348,23 @@ z-index: 9;
 	background: #ffde1a;
 color: #333333;
 }
+.form-control input:read-only {
+  border: 0;
+  box-shadow: none;
+  color: #14805e;
+}
+.form-control .readonly-icon {
+  position: absolute;
+  top: 7px;
+  width: 25px;
+  right: 8px;
+}
+.form-control input.nagad-agent:read-only {
+	color: #ca3376;
+}
+
+
+
 
 
 

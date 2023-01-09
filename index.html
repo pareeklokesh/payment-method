@@ -72,7 +72,7 @@
 				</div>
 			</div>
 			<div class="w-100">
-				<button class="payment-btn">Nagad Payment</button>
+				<button class="payment-btn" id="paymentfundsBtn"><span class="selectval"></span> <span> Payment</span></button>
 			</div>
 		</div>
 		<div class="amount-option">
@@ -151,7 +151,8 @@
 					<label>Amount:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" name="">
+					<input type="text" readonly value="500.00" name="">
+					<img src="assets/img/readonly-icon.png" class="readonly-icon" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -159,7 +160,8 @@
 					<label>NAGAD Agent:</label>
 				</div>
 				<div class="form-control">
-					<input type="text" name="">
+					<input type="text" class="nagad-agent" value="0985423658" readonly name="">
+					<img src="assets/img/readonly-icon.png" class="readonly-icon" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -205,6 +207,8 @@
 <script>
 	$(".select-payment").click(function(){
 		$(this).parent().toggleClass("select-payment-active").siblings().removeClass("select-payment-active");
+		var selectval = $(this).text();
+		$("#paymentfundsBtn .selectval").text(selectval);
 	});
 </script>
 
