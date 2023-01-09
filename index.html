@@ -204,7 +204,7 @@
 
 <script>
 	$(".select-payment").click(function(){
-		$(this).parent().addClass("select-payment-active").siblings().removeClass("select-payment-active");
+		$(this).parent().toggleClass("select-payment-active").siblings().removeClass("select-payment-active");
 	});
 </script>
 
